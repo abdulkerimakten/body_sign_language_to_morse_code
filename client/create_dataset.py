@@ -4,7 +4,7 @@ import cv2 as cv
 import mediapipe as mp
 # import matplotlib.pyplot as plt
 
-DATA_DIR = './data'
+DATA_DIR = '../data'
 
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
@@ -36,6 +36,6 @@ for dir_ in os.listdir(DATA_DIR):
             labels.append(dir_)
                 
 
-f = open('data.pickle', 'wb')
+f = open('../models/data.pickle', 'wb')
 pickle.dump({'data': data, 'labels': labels}, f)
 f.close()

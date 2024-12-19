@@ -1,11 +1,11 @@
-import cv2 as cv
-import mediapipe as mp
-import numpy as np
 import pickle
 import socket
+import cv2 as cv
+import numpy as np
+import mediapipe as mp
 
 # Load the model
-model_dict = pickle.load(open('./model.p', 'rb'))
+model_dict = pickle.load(open('../models/model.p', 'rb'))
 model = model_dict['model']
 
 # Load Mediapipe
@@ -60,4 +60,3 @@ finally:
     cap.release()
     sock.close()
     cv.destroyAllWindows()
-

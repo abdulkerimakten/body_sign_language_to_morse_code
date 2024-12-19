@@ -1,5 +1,5 @@
-import RPi.GPIO as GPIO
 import socket
+import RPi.GPIO as GPIO
 
 # GPIO setup
 GPIO.setmode(GPIO.BCM)  # Use BCM pin numbering
