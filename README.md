@@ -1,5 +1,5 @@
 <div align="center">
-<img src="" width="150" height="150" alt="icon">
+<img src="https://cdn-icons-png.flaticon.com/512/9626/9626716.png" width="150" height="150" alt="icon">
 </div>
 
 <h1 align="center">Body Sign Language To Morse Code</h1>
@@ -10,22 +10,25 @@
     * [Notes](#notes)
 * [Project Structure](#project-structure)
 * [How To Run?](#how-to-run)
+* [Test](#test)
 * [Licence](#licence)
 
 ## Purpose
 <div align="justify">
 
-Machine Learning Projecy based on the Python image processing and 
+Machine Learning Project based on the Python image processing and 
+
 
 ## Features
 ### Prerequisites
-* Raspberry Pi 3 or 4
+* Raspberry Pi 3B or 4B Model
 * 
 
 ### Notes
-* Run the project with the following command `python3 test_classifier.py` after installing the 4th step from [How To Run?](#how-to-run) section below for directly trying to run.
+1. Run the project with the following command `python3 test_classifier.py` after installing the 4th step from [How To Run?](#how-to-run) section below for directly trying to run.
 
 </div>
+
 
 ## Project Structure
 
@@ -35,7 +38,7 @@ The project follows this directory structure:
 body_sign_language_to_morse_code/
 │
 ├── client/
-│   ├── collect_imgs.oy
+│   ├── collect_imgs.py
 │   ├── create_dataset.py
 │   ├── socket_client.py
 │   ├── train_classifier.py
@@ -63,7 +66,12 @@ body_sign_language_to_morse_code/
 ```
 
 - client/: Contains config files for yolov3 and yolov4-tiny.
+    - 
+- data/: Contains datas created by collect_img.py file.
+- images/: Contains visual informations as images for the project.
+- models/:
 - requirements.txt: Lists project dependencies.
+
 
 ## How To Run?
 1. Clone the repository:
@@ -115,8 +123,12 @@ python3 train_classifier.py
 python3 test_classifier.py
 ```
 
+
+## Test
 ### Preview from the real-time test:
-<img src="/images/real-time-test.jpeg" width="150" height="150" alt="preview">
+
+<img src="/images/real-time-test.jpeg" weight="auto" height="500" alt="preview">
+
 
 ## Licence
 
