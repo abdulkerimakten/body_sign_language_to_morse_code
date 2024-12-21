@@ -66,7 +66,7 @@ body_sign_language_to_morse_code/
 ```
 
 - client/: Contains config files for yolov3 and yolov4-tiny.
-    - 
+    - collect_imgs.py:
 - data/: Contains datas created by collect_img.py file.
 - images/: Contains visual informations as images for the project.
 - models/:
@@ -76,7 +76,7 @@ body_sign_language_to_morse_code/
 ## How To Run?
 1. Clone the repository:
 ```
-https://github.com/abdulkerimakten/body_sign_language_to_morse_code.git
+git clone https://github.com/abdulkerimakten/body_sign_language_to_morse_code.git
 cd body_sign_language_to_morse_code
 ```
 
@@ -94,19 +94,17 @@ python3 -m venv env
 source env/bin/activate
 ```
 
-4. Install dependencies:
+3. Install dependencies:
 
 - If you are running repository on hardware platforms such as Raspberry Pi or Jetson, you should install `RPi.GPIO` library sepereatly; because this library is designed specifically for devices equipped with GPIO pins and may not be compatible with other platforms.
 
 ```
 pip install -r requirements.txt
-```
-or
-```
+# or
 pip3 install -r requirements.txt
 ```
 
-5. Run the project in order:
+4. Run the project in order:
 ```
 python3 collect_imgs.py
 ```
