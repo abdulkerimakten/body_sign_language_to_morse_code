@@ -125,9 +125,10 @@ python3 test_classifier.py
 ## Test
 ### Preview from the real-time test:
 
-<img src="/images/real-time-test.jpeg" weight="auto" height="500" alt="preview">
-
+<div align="center">
+    <img src="/images/real-time-test.jpeg" weight="auto" height="500" alt="preview">
+</div>
 
 ## Licence
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/PRU-Robotic/body_sign_language_to_morse_code?tab=MIT-1-ov-file#readme) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/abdulkerimakten/body_sign_language_to_morse_code?tab=MIT-1-ov-file#readme) file for details.
