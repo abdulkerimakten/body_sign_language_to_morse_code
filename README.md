@@ -11,18 +11,30 @@
 * [Project Structure](#project-structure)
 * [How To Run?](#how-to-run)
 * [Test](#test)
-* [Licence](#licence)
+* [References](#references)
+* [License](#license)
 
 ## Purpose
 <div align="justify">
 
-Machine Learning Project based on the Python image processing and 
+This Machine Learning (ML) project converts body sign language gestures into Morse code using Python and image processing techniques. It is designed to process visual input on a client device (laptop) and send results to a server device (Raspberry Pi) to control LEDs that blink Morse code. The division of processing ensures efficient execution, as the Raspberry Pi cannot run certain libraries like `mediapipe` effectively.
+
+The project provides a creative and practical tool for learning about Python, ML and hardware integration.
 
 
 ## Features
+- Real-time body gesture recognition using Python and image processing.
+- Conversion of recognized gestures into Morse code.
+- Transmission of Morse code data from a client to a server via sockets.
+- LED control on a Raspberry Pi to display Morse code.
+- Modular project structure for ease of testing and future extension.
+
 ### Prerequisites
 * Raspberry Pi 3B or 4B Model
-* 
+* Python 3.8+
+* Camera (client device)
+* Python libraries specified in `requirements.txt`
+* Optional: GPIO setup for controlling LEDs on the Raspberry Pi
 
 ### Notes
 1. Run the project with the following command `python3 test_classifier.py` after installing the 4th step from [How To Run?](#how-to-run) section below for directly trying to run.
@@ -65,11 +77,17 @@ body_sign_language_to_morse_code/
 └── requirements.txt
 ```
 
-- client/: Contains config files for yolov3 and yolov4-tiny.
-    - collect_imgs.py:
+- client/: Contains client and ML codes.
+    - collect_imgs.py: Collect images for training
+    - create_dataset.py: Create datasets from collected images
+    - socket_client.py: Handles communication with the server
+    - train_classifier.py: Train the gesture classifier
+    - test_classifier.py: Test the trained classifier
 - data/: Contains datas created by collect_img.py file.
 - images/: Contains visual informations as images for the project.
-- models/:
+- models/: Stores trained models and data files.
+- env/: Virtual environment.
+- server/socket_server.py: Receives data and controls the LEDs.
 - requirements.txt: Lists project dependencies.
 
 
@@ -129,6 +147,10 @@ python3 test_classifier.py
     <img src="/images/real-time-test.jpeg" weight="auto" height="500" alt="preview">
 </div>
 
-## Licence
+
+## References
+- [Sign language detection with Python and Scikit Learn...](https://www.youtube.com/watch?v=MJCSjXepaAM)
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/abdulkerimakten/body_sign_language_to_morse_code?tab=MIT-1-ov-file#readme) file for details.
