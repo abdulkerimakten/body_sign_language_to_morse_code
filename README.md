@@ -32,12 +32,13 @@ The project provides a creative and practical tool for learning about Python, ML
 ### Prerequisites
 * Raspberry Pi 3B or 4B Model
 * Python 3.8+
-* Camera (client device)
+* Camera (for client device)
 * Python libraries specified in `requirements.txt`
 * Optional: GPIO setup for controlling LEDs on the Raspberry Pi
 
 ### Notes
-1. Run the project with the following command `python3 test_classifier.py` after installing the 4th step from [How To Run?](#how-to-run) section below for directly trying to run.
+1. Directly test the project by running: `python3 test_classifier.py`<br>
+Ensure you've completed Step 3 in the [How To Run?](#how-to-run) section before testing.
 
 </div>
 
